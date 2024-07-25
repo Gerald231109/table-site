@@ -185,7 +185,7 @@ async function App() {
         })
     }
 
-    function paggination(usersArray) {
+    function pagination(usersArray) {
         return usersArray.slice((currPage-1) * 5, currPage * 5)
     }
 
@@ -228,7 +228,7 @@ async function App() {
                 user.remove()
             })
         }
-        let pageOfUsers = paggination(renderUsers)
+        let pageOfUsers = pagination(renderUsers)
         for (let user of pageOfUsers) {
             let date = new Date(user.registration_date)
             document.querySelector('.list__table').insertAdjacentHTML('beforeend', `
