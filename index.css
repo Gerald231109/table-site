@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+  
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #F7F7F7;
+    font-family: 'Inter';
+    padding: 1.2rem 1.2rem 1.2rem 2.7rem;
+    max-width: 100rem;
+    position: relative;
+}
+
+a {
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+.title {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.search {
+    background-color: #FFF;
+    display: grid;
+    grid-template-rows: 3.4rem 1.6rem;
+    border-radius: .7rem;
+    grid-gap: 2.4rem;
+    padding: 1.2rem 4.4rem 1.6rem 1.6rem;
+    box-shadow: 0px 18px 15px 0px #94949426;
+    margin-bottom: 7.2rem;
+}
+
+.search__input {
+    width: 100%;
+    border: none;
+    padding: .9rem;
+    padding-left: 3.1rem;
+    background: url(./icons/search.svg) no-repeat .4rem;
+    background-size: 2.4rem;
+    &::placeholder {
+        color: #9EAAB4;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.input__bg {
+    background-color: #ECEFF0;
+    border-radius: .4rem;
+}
+
+.visible {
+    visibility: visible !important;
+}
+
+.clear {
+    display: grid;
+    grid-template-columns: 1.6rem max-content;
+    grid-template-rows: 1.6rem;
+    align-items: center;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.clear:hover .clear__filter {
+    color: #000;
+}
+
+.clear__filter {
+    font-size: 1.2rem;
+    color: #4F4F4F;
+    transition: all .2s;
+}
+
+.clear__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    display: inline-block;
+}
+
+.list__sort {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-column-gap: .8rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.sort__title {
+    color: #9EAAB4;
+}
+
+[class*="sort__option"] {
+    color: #9EAAB4;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: .1rem;
+}
+
+.list__table {
+    background-color: #FFF;
+    border-radius: .4rem;
+    padding: 1.6rem 1.8rem 1.6rem 1.6rem;
+    display: grid;
+    grid-auto-flow: row;
+    color: #9EAAB4;
+}
+
+.table__item {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    border-bottom: 1px solid #F7F7F7;
+}
+
+.table__title {
+    font-size: 1.2rem;
+    padding-bottom: 2.2rem;
+}
+
+.title__item {
+    color: #9EAAB4;
+}
+
+.user {
+    font-size: 1.2rem;
+    padding: 1.4rem 0 2rem 0;
+    position: relative;
+
+}
+
+.user__name {
+    font-weight: 700;
+    color: #0CB4F1;
+}
+
+.user__delete {
+    width: 1.06rem;
+    height: 1.06rem;
+    position: absolute;
+    top: 1.4rem;
+    right: 3.2rem;
+    background: url('./icons/delete.svg') no-repeat center;
+    cursor: pointer;
+}
+
+.active {
+    color: #000;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.modal__dialog {
+    width: 36rem;
+    height: 13.5rem;
+    background-color: #FFFFFF;
+    padding: 3.6rem 3.6rem 3.2rem 3.6rem;
+    border-radius: .8rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.modal__text {
+    font-size: 1.2rem;
+}
+
+.modal__options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.modal__option {
+    padding: .6rem 3.6rem;
+    cursor: pointer;
+    border-radius: .3rem;
+}
+
+.confirm {
+    color: #828282;
+    background-color: #E0E0E0;
+    transition: color .3s;
+    &:hover {
+        color: #FFF;
+    }
+}
+
+.decline {
+    background-color: #0CB4F1;
+    color: #FFF
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.paggination {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    justify-content: center;
+    grid-column-gap: 2rem;
+    margin-top: 1.5rem;
+    justify-items: center;
+}
+
+.page__btn {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.page__back {
+    background: url(./icons/arrow-left.svg) no-repeat center;
+}
+
+.page__number {
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.page__forward {
+    background: url(./icons/arrow-right.svg) no-repeat center;
+}
+
+

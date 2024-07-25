@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>labmedia-table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <h1 class="title">Список пользователей</h1>
+    <section class="search">
+        <div class="input__bg">
+            <input class="search__input" type="text" placeholder="Поиск по имени или e-mail">
+        </div>
+        <div class="clear">
+            <img class="clear__icon" src="./icons/clean.svg">
+            <a href="#/" class="clear__filter">Очистить фильтр</a>
+        </div>
+    </section>
+    <section class="list">
+        <div class="list__sort">
+            <span class="sort__title">Сортировка:</span>
+            <a href="#/" class="sort__option--date">Дата регистрации</a>
+            <a href="#/" class="sort__option--rate">Рейтинг</a>
+        </div>
+        <div class="list__table">
+            <div class="table__title table__item">
+                <p href="#/" class="title__item">Имя пользователя</a>
+                <p href="#/" class="title__item">E-mail</a>
+                <p href="#/" class="title__item">Дата регистрации</a>
+                <p href="#/" class="title__item">Рейтинг</a>
+            </div>
+        </div>
+    </section>
+    <section class="paggination">
+        <a class="page__back page__btn"></a>
+        <p class="page__number"></p>
+        <a class="page__forward page__btn"></a>
+    </section>
+    <section class="modal hidden">
+        <div class="modal__dialog">
+            <div class="modal__text">Вы уверены, что хотите удалить пользователя?</div>
+            <div class="modal__options">
+                <btn class="modal__option confirm">Да</btn>
+                <btn class="modal__option decline">Нет</btn>
+            </div>
+        </div>
+        
+    </section>
+</body>
+</html>
